@@ -1,0 +1,23 @@
+body{
+    width: 960px;
+    margin: auto;
+}
+
+.instructions{
+    border: solid 1px black;
+    text-align: center;
+}
+
+#products{
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 1px black;
+}
+
+label {
+    width: 300px;
+    border: solid 1px black;
+}

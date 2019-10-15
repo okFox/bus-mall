@@ -17,45 +17,45 @@ class Product {
     }
 }
   
-const bag = new Product('bag', 'Bag', '../assets/bag.jpg');
+const bag = new Product('bag', 'Bag', './assets/bag.jpg');
 
-const banana = new Product('banana', 'Banana', '../assets/banana.jpg');
+const banana = new Product('banana', 'Banana', './assets/banana.jpg');
 
-const bathroom = new Product('bathroom', 'Bathroom', '../assets/bathroom.jpg');
+const bathroom = new Product('bathroom', 'Bathroom', './assets/bathroom.jpg');
 
-const boots = new Product('boots', 'Boots', '../assets/boots.jpg');
+const boots = new Product('boots', 'Boots', './assets/boots.jpg');
 
-const breakfast = new Product('breakfast', 'Breakfast', '../assets/breakfast.jpg');
+const breakfast = new Product('breakfast', 'Breakfast', './assets/breakfast.jpg');
 
-const bubblegum = new Product('bubblegum', 'Bubblegum', '../assets/bubblegum.jpg');
+const bubblegum = new Product('bubblegum', 'Bubblegum', './assets/bubblegum.jpg');
 
-const chair = new Product('chair', 'Chair', '../assets/chair.jpg');
+const chair = new Product('chair', 'Chair', './assets/chair.jpg');
 
-const cthulhu = new Product('cthulhu', 'cthulhu', '../assets/cthulhu.jpg');
+const cthulhu = new Product('cthulhu', 'cthulhu', './assets/cthulhu.jpg');
 
-const dogDuck = new Product('dog-duck', 'Dog Duck', '../assets/dog-duck.jpg');
+const dogDuck = new Product('dog-duck', 'Dog Duck', './assets/dog-duck.jpg');
 
-const dragon = new Product('dragon', 'Dragon', '../assets/dragon.jpg');
+const dragon = new Product('dragon', 'Dragon', './assets/dragon.jpg');
 
-const pen = new Product('pen', 'Pen', '../assets/pen.jpg');
+const pen = new Product('pen', 'Pen', './assets/pen.jpg');
 
-const petSweep = new Product('pet-sweep', 'Pet Sweep', '../assets/pet-sweep.jpg');
+const petSweep = new Product('pet-sweep', 'Pet Sweep', './assets/pet-sweep.jpg');
 
-const scissors = new Product('scissors', 'Scissors', '../assets/scissors.jpg');
+const scissors = new Product('scissors', 'Scissors', './assets/scissors.jpg');
 
-const shark = new Product('shark', 'Shark', '../assets/shark.jpg');
+const shark = new Product('shark', 'Shark', './assets/shark.jpg');
 
-const sweep = new Product('sweep', 'Sweep', '../assets/sweep.jpg');
+const sweep = new Product('sweep', 'Sweep', './assets/sweep.jpg');
 
-const tauntaun = new Product('tauntaun', 'Tauntaun', '../assets/tauntaun.jpg');
+const tauntaun = new Product('tauntaun', 'Tauntaun', './assets/tauntaun.jpg');
 
-const unicorn = new Product('unicorn', 'Unicorn', '../assets/unicorn.jpg');
+const unicorn = new Product('unicorn', 'Unicorn', './assets/unicorn.jpg');
 
-const usb = new Product('usb', 'Usb', '../assets/usb.jpg');
+const usb = new Product('usb', 'Usb', './assets/usb.jpg');
 
-const waterCan = new Product('water-can', 'Water Can', '../assets/water-can.jpg');
+const waterCan = new Product('water-can', 'Water Can', './assets/water-can.jpg');
 
-const wineGlass = new Product('wine-glass', 'Wine Glass', '../assets/wine-glass.jpg');
+const wineGlass = new Product('wine-glass', 'Wine Glass', './assets/wine-glass.jpg');
 
 
 const productItemArray = [

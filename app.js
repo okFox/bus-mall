@@ -6,6 +6,9 @@ let previousOptions = [1, 2, 3];
 const product1 = document.getElementById('product-one');
 const product2 = document.getElementById('product-two');
 const product3 = document.getElementById('product-three');
+const image1 = document.getElementById('image-one');
+const image2 = document.getElementById('image-two');
+const image3 = document.getElementById('image-three');
 
 
 // (newIndices, productItemArray)
@@ -15,15 +18,17 @@ function renderProductOptions(randomArray, array) {
     let optionTwo = array[randomArray[1]];
     let optionThree = array[randomArray[2]];
 
-    product1.setAttribute('src', optionOne.getImage());
+    image1.setAttribute('src', optionOne.getImage());
     product1.setAttribute('value', optionOne.getId());
 
-    product2.setAttribute('src', optionTwo.getImage());
+    image2.setAttribute('src', optionTwo.getImage());
     product2.setAttribute('value', optionTwo.getId());
     
-    product3.setAttribute('src', optionThree.getImage());
+    image3.setAttribute('src', optionThree.getImage());
     product3.setAttribute('value', optionThree.getId());
 }
 
 let newIndices = getNewProductIndices(productItemArray, previousOptions);
 renderProductOptions(newIndices, productItemArray);
+
+
