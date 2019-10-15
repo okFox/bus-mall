@@ -4,7 +4,7 @@ body{
 }
 
 .instructions{
-    border: solid 1px black;
+
     text-align: center;
 }
 
@@ -14,10 +14,15 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: solid 1px black;
+
 }
 
 label {
     width: 300px;
-    border: solid 1px black;
+
+}
+
+input {
+display: none;
+
 }
