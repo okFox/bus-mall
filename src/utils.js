@@ -1,6 +1,6 @@
 export function calcLinePercentage(timesDisplayed, timesClicked) {
-    const percentage = (timesClicked / timesDisplayed) * 100;
-    return percentage + '&percnt;';
+    const percentage = Math.round((timesClicked / timesDisplayed) * 100);
+    return percentage;
 }
 //need to turn percentage to display as 00%
 
@@ -22,3 +22,14 @@ export const getNewProductIndices = (array, previousProducts) => {
     return newProductIndices;
 };
 
+export function findById(items, id) {
+    for (let i = 0; i < items.length; i++) {
+        const item = items[i];
+
+        if (item.id === id) {
+            return item;
+        }
+    }
+
+    return null;
+}

@@ -58,8 +58,8 @@ const waterCan = new Product('water-can', 'Water Can', './assets/water-can.jpg')
 const wineGlass = new Product('wine-glass', 'Wine Glass', './assets/wine-glass.jpg');
 
 
-const productItemArray = [
+const arrayOfProducts = [
     bag, banana, bathroom, boots, breakfast, bubblegum, chair, cthulhu, dogDuck, dragon, pen, petSweep, scissors, shark, sweep, tauntaun, unicorn, usb, waterCan, wineGlass
 ];
 
-export default productItemArray;
+export default arrayOfProducts;

@@ -1,14 +1,21 @@
-import productItemArray from './data/products-api.js';
-import { calcLinePercentage, generateRandomInt, getNewProductIndices } from './src/utils.js';
+import arrayOfProducts from './data/products-api.js';
+import { getNewProductIndices } from './src/utils.js';
+import ProductArray from './data/product-array.js';
 
 let previousOptions = [1, 2, 3]; 
-
+let starsArray = [];
 const product1 = document.getElementById('product-one');
 const product2 = document.getElementById('product-two');
 const product3 = document.getElementById('product-three');
 const image1 = document.getElementById('image-one');
 const image2 = document.getElementById('image-two');
 const image3 = document.getElementById('image-three');
+const productsSelection = document.querySelectorAll('input');
+let productsArray = new ProductArray(arrayOfProducts);
+let productItemArray = productsArray.getProducts(); 
+// set new page at start
+let newIndices = getNewProductIndices(productItemArray, previousOptions);
+renderProductOptions(newIndices, productItemArray);
 
 
 // (newIndices, productItemArray)
@@ -28,7 +35,21 @@ function renderProductOptions(randomArray, array) {
     product3.setAttribute('value', optionThree.getId());
 }
 
-let newIndices = getNewProductIndices(productItemArray, previousOptions);
+
+function handleUserChoice(event) {
+    let clickedElement = event.target.value;
+    console.log(clickedElement);
+}
+
+// iterate through productsSelections
+productsSelection.forEach(element => {
+    element.addEventListener('input', handleUserChoice);
+});
+
+
+
+
+
+
+newIndices = getNewProductIndices(productItemArray, previousOptions);
 renderProductOptions(newIndices, productItemArray);
-
-
