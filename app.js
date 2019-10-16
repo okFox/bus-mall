@@ -3,7 +3,8 @@ import { getNewProductIndices } from './src/utils.js';
 import ProductArray from './data/product-array.js';
 
 let previousOptions = [1, 2, 3]; 
-let starsArray = [];
+let statsArray = [];
+
 const product1 = document.getElementById('product-one');
 const product2 = document.getElementById('product-two');
 const product3 = document.getElementById('product-three');
@@ -38,8 +39,17 @@ function renderProductOptions(randomArray, array) {
 
 function handleUserChoice(event) {
     let clickedElement = event.target.value;
-    console.log(clickedElement);
+  
+    statsArray = 
+
 }
+
+
+
+
+
+
+
 
 // iterate through productsSelections
 productsSelection.forEach(element => {
