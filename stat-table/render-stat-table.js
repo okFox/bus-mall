@@ -5,7 +5,7 @@ import { calcLinePercentage } from '../src/utils.js';
 
 function renderStatTable(productId, timesDisplayed, timesClicked) {
 
-
+   
     
     const tr = document.createElement('tr');
 
@@ -31,6 +31,7 @@ function renderStatTable(productId, timesDisplayed, timesClicked) {
     const thisProductPercentage = calcLinePercentage(timesDisplayed, timesClicked);
     percentCell.textContent = thisProductPercentage;
     tr.appendChild(percentCell);
+   
     return tr;
 }
 
