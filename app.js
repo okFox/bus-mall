@@ -1,11 +1,13 @@
 import arrayOfProducts from './data/products-api.js';
-import { getNewProductIndices, findById } from './src/utils.js';
+import { getNewProductIndices, findById, saveToStorage } from './src/utils.js';
 import ProductArray from './data/product-array.js';
+
 
 
 let previousIndices = [-1, -1, -1]; 
 
 let statsArray = [];
+let totalUserClicks = 0;
 
 const product1 = document.getElementById('product-one');
 const product2 = document.getElementById('product-two');
@@ -14,6 +16,7 @@ const image1 = document.getElementById('image-one');
 const image2 = document.getElementById('image-two');
 const image3 = document.getElementById('image-three');
 const productsSelection = document.querySelectorAll('input');
+
 
 let productsArray = new ProductArray(arrayOfProducts);
 let productItemArray = productsArray.getProducts(); 
@@ -57,16 +60,28 @@ function updateTimesDisplayed() {
             statItem.timesDisplayed ++;
         }
     });
+    saveToStorage(statsArray);
 }
 
 function handleUserChoice(event) {
-
+    totalUserClicks ++;
     let clickedElement = event.target.value;
     // increment times picked for one item   
     let statItem = findById(statsArray, clickedElement);
     statItem.timesClicked ++;
+    saveToStorage(statsArray);
     // update previous three
     previousIndices = newIndices;
+
+    if (totalUserClicks === 25){
+        const resultsButton = document.getElementById('results-button');
+        resultsButton.removeAttribute('hidden');
+        let products = document.getElementById('products');
+        products.style.display = 'none';
+
+
+    }
+
     // get three new products to display
     newIndices = getNewProductIndices(productItemArray, previousIndices);
     // display new products on page
@@ -74,6 +89,7 @@ function handleUserChoice(event) {
         element.checked = false;
     });
     renderProductOptions(newIndices, productItemArray);
+    saveToStorage(statsArray);
 }
 
 // iterate through productsSelections

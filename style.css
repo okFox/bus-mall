@@ -24,5 +24,16 @@ label {
 
 input {
 display: none;
+}
 
+button {
+
+    font-size: 100pt;
+    border-radius: 15px;
+    background: pink;
+    
+}
+.button {
+    display: flex;
+    justify-content: center;
 }

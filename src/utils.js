@@ -1,6 +1,6 @@
 export function calcLinePercentage(timesDisplayed, timesClicked) {
     const percentage = Math.round((timesClicked / timesDisplayed) * 100);
-    return percentage;
+    return `${percentage}%`;
 }
 //need to turn percentage to display as 00%
 
@@ -32,4 +32,17 @@ export function findById(items, id) {
     }
 
     return null;
+}
+
+
+export function saveToStorage(statArray) {
+    const json = JSON.stringify(statArray);
+    localStorage.setItem('Stat Array', json);
+}
+
+export function getFromStorage() {
+    const json = localStorage.getItem('Stat Array');
+    if (!json) return null;
+    const parsedStatArray = JSON.parse(json);
+    return parsedStatArray;
 }

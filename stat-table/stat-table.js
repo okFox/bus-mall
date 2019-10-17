@@ -1,11 +1,5 @@
 import renderStatTable from './render-stat-table.js';
-
-
-let timesDisplayed = 4;
-let timesClicked = 2;
-let productId = 'banana';
-
-let dom = renderStatTable(productId, timesDisplayed, timesClicked);
+import { getFromStorage } from '../src/utils.js';
 
 
 
@@ -15,4 +9,22 @@ let dom = renderStatTable(productId, timesDisplayed, timesClicked);
 
 const tbody = document.querySelector('tbody');
 
-tbody.appendChild(dom);
+let currentStatsArray = getFromStorage('Stats Array');
+
+currentStatsArray.forEach(element => {
+    let dom = renderStatTable(element.id, element.timesDisplayed, element.timesClicked);
+    tbody.appendChild(dom);
+});
+//statsArray.forEach(element => )
+
+//let dom = renderStatTable(element.id, element.timesDisplayed, element.timesClicked);
+
+
+
+
+
+
+
+//const tbody = document.querySelector('tbody');
+
+//tbody.appendChild(dom);
