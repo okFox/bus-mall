@@ -2,10 +2,7 @@ import arrayOfProducts from './data/products-api.js';
 import { getNewProductIndices, findById, saveToStorage } from './src/utils.js';
 import ProductArray from './data/product-array.js';
 
-
-
 let previousIndices = [-1, -1, -1]; 
-
 let statsArray = [];
 let totalUserClicks = 0;
 
@@ -21,15 +18,14 @@ const productsSelection = document.querySelectorAll('input');
 let productsArray = new ProductArray(arrayOfProducts);
 let productItemArray = productsArray.getProducts(); 
 
-// set new page at start
 let newIndices = getNewProductIndices(productItemArray, previousIndices);
+
 renderProductOptions(newIndices, productItemArray);
 
 productsSelection.forEach(element => {
     element.addEventListener('input', handleUserChoice);
 });
 
-// (newIndices, productItemArray)
 function renderProductOptions(randomArray, array) {
 
     updateTimesDisplayed();
@@ -65,12 +61,10 @@ function updateTimesDisplayed() {
 
 function handleUserChoice(event) {
     totalUserClicks ++;
-    let clickedElement = event.target.value;
-    // increment times picked for one item   
+    let clickedElement = event.target.value; 
     let statItem = findById(statsArray, clickedElement);
     statItem.timesClicked ++;
     saveToStorage(statsArray);
-    // update previous three
     previousIndices = newIndices;
 
     if (totalUserClicks === 25){
@@ -82,9 +76,7 @@ function handleUserChoice(event) {
 
     }
 
-    // get three new products to display
     newIndices = getNewProductIndices(productItemArray, previousIndices);
-    // display new products on page
     productsSelection.forEach(element => {
         element.checked = false;
     });
@@ -92,7 +84,7 @@ function handleUserChoice(event) {
     saveToStorage(statsArray);
 }
 
-// iterate through productsSelections
+
 productsSelection.forEach(element => {
     element.addEventListener('input', handleUserChoice);
 

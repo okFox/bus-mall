@@ -1,9 +1,8 @@
 export function calcLinePercentage(timesDisplayed, timesClicked) {
     const percentage = Math.round((timesClicked / timesDisplayed) * 100);
-    //return `${percentage}%`;
+
     return percentage;
 }
-//need to turn percentage to display as 00%
 
 Math.round();
 
